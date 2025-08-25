@@ -1,0 +1,3 @@
+RouterName=R4
+Interface=Gi0/0,IP=192.168.3.2,BW=200Mbps,MTU=1500,VLAN=30,Peer=R2
+Interface=Gi0/1,IP=192.168.4.2,BW=100Mbps,MTU=1400,VLAN=40,Peer=R3   # ❌ MTU mismatch (1400 vs 1500 with R3)
