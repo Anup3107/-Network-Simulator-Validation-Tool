@@ -12,14 +12,26 @@ This project is a **Cisco-like Network Topology Simulator** that:   - Parses dev
 - Draw topology graph with highlights  
 - Export **Network_Report.pdf**
 
- 📌 Requirements
+## 📌 Requirements
+- Python 3.9+
+- Libraries:
+- matplotlib
+- networkx
+- reportlab
 
-Python 3.9+
+**pip install matplotlib networkx reportlab**
 
-Libraries:
+## Run with validation + graph + PDF report
 
-matplotlib
+**python -m src.main --configs configs --draw --report**
 
-networkx
+**📝 Example Output**
 
-reportlab
+Topology Graph:
+-Duplicate IPs → 🔴 red nodes
+-Invalid VLANs → 🟠 orange borders
+-MTU mismatches → 🔴 red edges
+-Loops → 🔀 dashed edges
+-PDF Report (Network_Report.pdf):
+-Validation Summary
+-Network Topology Graph
